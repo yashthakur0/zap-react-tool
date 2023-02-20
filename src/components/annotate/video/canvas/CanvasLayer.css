@@ -1,6 +1,5 @@
 .CanvasLayer{
     position: absolute;
-    /* pointer-events: none; */
     height:360px;
     width: 640px;
 }

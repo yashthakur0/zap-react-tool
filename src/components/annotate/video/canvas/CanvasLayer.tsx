@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./CanvasLayer.css";
 import { Stage, Layer } from "react-konva";
-import * as Konva from "konva"
+// import * as Konva from "konva"
 import CircleComponent from "./Circle";
+import RectComponent from "./Rectangle";
+
 
 
 const CanvasLayer = () => {
@@ -47,7 +49,8 @@ const CanvasLayer = () => {
         onClick={addComment} 
         >
         <Layer>
-        {dot.map((item, i) => ( <CircleComponent key={i} {...item}></CircleComponent> ))}
+        {/* {dot.map((item, i) => ( <CircleComponent key={i} {...item}></CircleComponent> ))} */}
+        <RectComponent></RectComponent>
         </Layer>
       </Stage>
 

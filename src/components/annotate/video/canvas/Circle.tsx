@@ -1,5 +1,5 @@
 import React from "react";
-import { Layer, Circle } from "react-konva";
+import { Circle } from "react-konva";
 
 const CircleComponent = (props: any) => {
 
