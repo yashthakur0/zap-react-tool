@@ -49,8 +49,8 @@ const CanvasLayer = () => {
         onClick={addComment} 
         >
         <Layer>
-        {/* {dot.map((item, i) => ( <CircleComponent key={i} {...item}></CircleComponent> ))} */}
-        <RectComponent></RectComponent>
+        {dot.map((item, i) => ( <CircleComponent key={i} {...item}></CircleComponent> ))}
+        {/* <RectComponent></RectComponent> */}
         </Layer>
       </Stage>
 
