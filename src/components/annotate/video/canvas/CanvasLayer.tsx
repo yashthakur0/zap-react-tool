@@ -50,7 +50,7 @@ const CanvasLayer = () => {
         >
         <Layer>
         {dot.map((item, i) => ( <CircleComponent key={i} {...item}></CircleComponent> ))}
-        {/* <RectComponent></RectComponent> */}
+        {/* <RectComponent></RectComponent>  */}
         </Layer>
       </Stage>
 
