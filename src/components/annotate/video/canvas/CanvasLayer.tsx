@@ -17,20 +17,17 @@ const CanvasLayer = () => {
     {type:"dot", dataset:{x:320,y:30, radius:20, fill:"red"}}
   ]
 
-
   function addComment(e:any) {
     // let { clientX, clientY } = e.evt;
     // console.log(e.evt);
     // console.log(clientX, clientY);
     const stage = e.target.getStage();
     const stageLocation = stage.getPointerPosition();
-    
     setDots([...dot, {x: stageLocation.x, y: stageLocation.y, radius: 10, fill: "red"}])
-    console.log(dot,"Array")
+    // console.log(dot,"Array")
   }
 
   function generate(e:any){
-
     let preSet:any = []
     dataSet.forEach((v:any) => {
       preSet = [...preSet, {x:v.dataset.x, y: v.dataset.y, radius: 10, fill: "red"}]
@@ -42,15 +39,13 @@ const CanvasLayer = () => {
     setDots([])
   }
 
-
-
   return (
     <div className="CanvasLayer">
       <Stage
         width={640}
         height={360}
-        onClick={addComment}
-      >
+        onClick={addComment} 
+        >
         <Layer>
         {dot.map((item, i) => ( <CircleComponent key={i} {...item}></CircleComponent> ))}
         </Layer>
