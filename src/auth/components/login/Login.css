@@ -1,0 +1,96 @@
+  .main-div {
+    display: flex !important;
+    flex-direction: column !important;
+    transition: none !important;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    background-size: contain;
+    background-attachment: fixed;
+    flex: 1 0 auto;
+    /* background-color: black; */
+    background-image: url(../../../../public/media/images/14.png);
+    min-width: 100dvh;
+    min-height: 100dvh;
+
+  }
+
+  .outer-div {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 2.5rem !important;
+    padding-bottom: 5rem !important;
+    transition: none !important;
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inner-div {
+    padding: 2rem !important;
+    width: 500px !important;
+    box-shadow: 0 0.1rem 1rem 0.25rem rgb(0 0 0 / 5%) !important;
+  }
+
+  .logo {
+    transition: none !important;
+    margin-bottom: 3rem !important;
+  }
+
+  .logo img {
+    height: 45px !important;
+  }
+
+  .form-head {
+    margin-bottom: 2.5rem !important;
+    text-align: center !important;
+    transition: none !important;
+  }
+
+  .form-head h1 {
+    color: var(--kt-text-dark) !important;
+    margin-bottom: 0.75rem !important;
+    font-size: 1.5rem;
+  }
+
+  .form-head #head-div {
+    color: var(--kt-text-gray-400) !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+  }
+
+  .form-field {
+    margin-bottom: 3rem !important;
+  }
+
+  .form-field label {
+    color: var(--kt-text-dark) !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+  }
+
+  .form-field input {
+    background-color: #f5f8fa;
+    border-color: #f5f8fa;
+    color: #5E6278;
+    /* border: 1px solid #E4E6EF; */
+    box-shadow: none !important;
+    min-height: calc(1.5em + 1.65rem + 2px);
+    padding: 0.825rem 1.5rem;
+    /* font-size: 1.15rem; */
+    font-size: smaller;
+    border-radius: 0.85rem;
+  }
+
+  .form-field div {
+    margin-top: -1.25rem !important;
+    justify-content: space-between !important;
+    display: flex !important;
+  }
+
+  .social-login {
+    font-size: 1rem;
+  }
+
+  .social-login img {
+    width: 20px;
+  }
