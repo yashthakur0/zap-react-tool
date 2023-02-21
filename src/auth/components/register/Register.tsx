@@ -33,6 +33,7 @@ const Register = () => {
           password: res.data.data.password,
         };
         localStorage.setItem("userInfo", JSON.stringify(infoData));
+        window.location.href = '/video';
         // console.log(infoData);
         // console.log(res);
       })
@@ -47,7 +48,10 @@ const Register = () => {
   };
 
   const socialLogin = useGoogleLogin({
-    onSuccess: (tokenResponse) => console.log(tokenResponse),
+    onSuccess: (tokenResponse) => {
+      window.location.href = '/video';
+      console.log(tokenResponse)
+    },
   });
 
   return (

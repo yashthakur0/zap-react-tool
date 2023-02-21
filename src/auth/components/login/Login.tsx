@@ -1,13 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import { googleLogin } from "../../moduls/_requests";
 import { GoogleLogin, useGoogleLogin } from "@react-oauth/google";
 import jwt_decode from "jwt-decode";
 
 const url = "https://zapstaging.ceryxdigital.com/user/login";
+
+// const navigate = () => useNavigate();
 
 const Login = () => {
   const [values, setValues] = useState({
@@ -19,6 +21,9 @@ const Login = () => {
   // console.log(values);
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
+
+    // const navigate = useNavigate();
+
     e.preventDefault();
     let data = {
       email: values.email,
@@ -28,6 +33,8 @@ const Login = () => {
       .post(url, data)
       .then((res) => {
         localStorage.setItem("token", res.data.data.token);
+        window.location.href = '/video';
+        // navigate("/video", {replace: true});
         // console.log(res);
         // console.log(res.data.data.token);
       })
@@ -60,7 +67,16 @@ const Login = () => {
   };
 
   const socialLogin = useGoogleLogin({
-    onSuccess: (tokenResponse) => console.log(tokenResponse),
+    onSuccess: (tokenResponse) => {
+
+      window.location.href = '/video';
+
+      // const navigate = useNavigate();
+
+      // navigate("/video", {replace: true});
+
+      console.log(tokenResponse)
+    },
   });
 
   return (

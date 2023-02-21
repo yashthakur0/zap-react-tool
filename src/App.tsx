@@ -28,7 +28,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Dashboard/>} />
+        {/* <Route path="/" element={<Dashboard/>} /> */}
+        <Route path="/" element={<Login/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/signin" element={<Register />} />
         <Route path="/video" element={<VideoContainerComponent />} />
